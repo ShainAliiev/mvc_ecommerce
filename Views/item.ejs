@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product by ID</title>
+  </head>
+  <body>
+    <div>
+      <%= data.title %> <br />
+      <%= data.description %> <br />
+      <%= data.price %> <br />
+      <%= data.discountPercentage %> <br />
+      <%= data.rating %> <br />
+      <%= data.stock %> <br />
+      <%= data.brand %> <br />
+      <%= data.category %> <br />
+
+      <img src="<%=data.thumbnail %>" width="100" height="100" /> <br />
+      <% data.images.map((img) => { %>
+      <img src="<%= img %>" width="50" height="50" />
+      <% }) %>
+    </div>
+  </body>
+</html>
